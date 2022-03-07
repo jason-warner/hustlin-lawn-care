@@ -1,0 +1,29 @@
+.nav {
+    display: flex;
+    flex-direction: row;
+    height: 60px;
+    width: 100vw;
+    justify-content: space-between;
+}
+.ul {
+    width: 500px;
+    padding: 0 1em;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.li {
+    color: red;
+    display: inline-flex;
+    flex-direction: column;
+    align-self: center;
+    height: 100%;
+    width: 100%;
+}
+.link {
+    height: 100%;
+    width: 100%;
+    display: inline-flex;
+    flex-direction: column;
+    align-self: center;
+}
