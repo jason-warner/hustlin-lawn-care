@@ -16,7 +16,7 @@ const Navbar = () => {
             <div className={NavbarStyle.logoContainer}>
                 <div className={NavbarStyle.mainLogoContainer}>
                     <span className={NavbarStyle.logo}>
-                        <Link href='/' >
+                        <Link href='/' passHref>
                             <Image src='/text-logo.svg' alt='logo' width='120px' height='60px' />
                         </Link>
                     </span>
