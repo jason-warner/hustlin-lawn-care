@@ -1,29 +1,84 @@
+@import "mixins";
+
 .nav {
+    background-color: #79b524;
+    justify-content: center;
     display: flex;
     flex-direction: row;
     height: 60px;
     width: 100vw;
-    justify-content: space-between;
+    @include md {
+        justify-content: space-between;
+    }
+    .logoContainer {
+        display: inline-flex;
+        flex-direction: row;
+        width: 100%;
+        .mainLogoContainer {
+            display: inline-flex;
+            flex-direction: column;
+            width: calc(100vw - 80px);
+            justify-self: flex-start;
+            @include md {
+                width: max-content;
+            }
+            .logo {
+                display: flex;
+                width: 120px;
+                align-self: center;
+                flex-direction: column;
+                margin-right: -80px;
+                @include md {
+                    display: inline-flex;
+                    flex-direction: column;
+                    align-self: center;
+                    margin-right: 0;
+                }
+            }
+        }
+        .navButton {
+            cursor: pointer;
+            display: flex;
+            width: 80px;
+            align-self: center;
+            justify-self: flex-end;
+            flex-direction: column;
+            @include md {
+                display: none;
+            }
+        }
+    }
+    .listContainer {
+        .ul {
+            display: none;
+            align-items: center;
+            margin: 0 auto;
+            height: 60px;
+            @include md {
+                width: 500px;
+                padding: 0 1em;
+                display: inline-flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            .li {
+                height: fit-content;
+                @include md {
+                    color: red;
+                    display: inline-flex;
+                    flex-direction: column;
+                    align-self: center;
+                }
+            }
+            .li_open {
+                color: white;
+            }
+        }
+        .ul_open {
+            height: 50vh;
+        }
+    }
 }
-.ul {
-    width: 500px;
-    padding: 0 1em;
-    display: inline-flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-.li {
-    color: red;
-    display: inline-flex;
-    flex-direction: column;
-    align-self: center;
-    height: 100%;
-    width: 100%;
-}
-.link {
-    height: 100%;
-    width: 100%;
-    display: inline-flex;
-    flex-direction: column;
-    align-self: center;
+.nav_open {
+    height: 100vh;
 }

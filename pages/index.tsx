@@ -6,11 +6,11 @@ import styles from '../styles/Home.module.scss'
 
 const Home: NextPage = () => {
   return (
-    <div className={styles.container}>
+    <div>
       {/* <Navbar /> */}
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
+      <main>
+        <h1>
           Hustlin&apos; Lawn Care
         </h1>
 
