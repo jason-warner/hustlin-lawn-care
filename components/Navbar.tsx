@@ -11,8 +11,10 @@ const Navbar = () => {
         'Pricing',
         'Contact'
     ];
+    const mergeStyles = (styleArray: string[]) => (styleArray.map((style: string) => `${style}`).join(" "));
+    const conditionalClasses = (bool: boolean, classOne: string, classTwo: string) => (!!bool ? mergeStyles([classOne, classTwo]) : classOne)
     return (
-        <nav className={NavbarStyle.nav}>
+        <nav className={conditionalClasses(isClicked, NavbarStyle.nav, NavbarStyle.navOpen)}>
             <div className={NavbarStyle.logoContainer}>
                 <div className={NavbarStyle.mainLogoContainer}>
                     <span className={NavbarStyle.logo}>
@@ -29,10 +31,10 @@ const Navbar = () => {
                 </span>
             </div>
             <div className={NavbarStyle.listContainer}>
-                <ul className={`${isClicked ? NavbarStyle.ul_open : NavbarStyle.ul}`}>
+                <ul className={conditionalClasses(isClicked, NavbarStyle.ul, NavbarStyle.ulOpen)}>
                     {pages.map((page, index) => (
-                        <li key={index} className={`${isClicked ? NavbarStyle.li_open : NavbarStyle.li}`}>
-                            <Link href={`/${page.toLowerCase()}`}>{page}</Link>
+                        <li key={index} className={conditionalClasses(isClicked, NavbarStyle.li, NavbarStyle.liOpen)}>
+                            <Link href={`/${page.toLowerCase()}`}><div className={NavbarStyle.center}>{page}</div></Link>
                         </li>
                     ))}
                 </ul>
