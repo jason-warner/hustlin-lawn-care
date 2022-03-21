@@ -1,0 +1,36 @@
+.main {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    .headingContainer {
+        margin: 6rem auto;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        width: 100vw;
+        height: 50vh;
+        .title {
+            position: absolute;
+            z-index: 2;
+        }
+        .background {
+            width: 100%;
+            height: 100%;
+            .overlay {
+                width: 100%;
+                height: 100%;
+                background: rgba(0,0,0, 0.3);
+                position: absolute;
+                z-index: 1;
+                .bgImg {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    z-index: 0;
+                }
+            }
+        }
+    }
+}
