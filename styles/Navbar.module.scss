@@ -1,7 +1,7 @@
 @import "mixins";
 
 .nav {
-    background-color: #73B11B;
+    background-color: black;
     justify-content: center;
     display: flex;
     flex-direction: row;
@@ -47,9 +47,6 @@
                 display: none;
             }
         }
-        .navButtonOpen {
-            color: red;
-        }
     }
     .listContainer {
         display: flex;
@@ -68,8 +65,9 @@
             }
             .li {
                 height: fit-content;
+                color: white;
                 @include md {
-                    color: black;
+                    color: white;
                     display: inline-flex;
                     flex-direction: column;
                     align-self: center;

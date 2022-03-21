@@ -4,6 +4,19 @@
     display: flex;
     flex-direction: column;
     background-color: #ffffff;
+    .logoContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        width: 100vw;
+        height: 60px;
+        .logo {
+            display: inline-flex;
+            width: 50px;
+            height: 50px;
+        }
+    }
+
     .headingContainer {
         margin: 6rem auto;
         position: relative;
@@ -21,7 +34,7 @@
             .overlay {
                 width: 100%;
                 height: 100%;
-                background: rgba(0,0,0, 0.3);
+                background: rgba(0, 0, 0, 0.3);
                 position: absolute;
                 z-index: 1;
                 .bgImg {

@@ -18,7 +18,7 @@ const Navbar = () => {
                 <div className={style.mainLogoContainer}>
                     <span className={style.logo}>
                         <Link href='/' passHref>
-                            <Image src='/text-logo.svg' alt='logo' width='120px' height='60px' />
+                            <Image src='/text-logo-white.svg' alt='logo' width='120px' height='60px' />
                         </Link>
                     </span>
                 </div>
