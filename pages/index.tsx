@@ -23,10 +23,15 @@ const Home: NextPage = () => {
         </div>
       </div>
       <div className={style.headingContainer}>
-        <h1 className={style.title} > Hustlin&apos; Lawn Care </h1>
         <span className={style.background}>
           <div className={style.overlay}></div>
-          <Image src='/lawnbackdrop.jpeg' alt='logo' layout={'fill'} className={style.bgImg} />
+          <div className={style.bgImg}>
+            <Image src='/lawnbackdrop.jpeg' alt='logo' layout={'fill'} />
+          </div>
+          <div className={style.fullLogo} >
+            <Image src='/full-logo-white.svg' alt='logo' layout={'fill'} />
+          </div>
+
         </span>
       </div>
 

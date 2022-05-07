@@ -1,28 +1,30 @@
 .main {
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     display: flex;
     flex-direction: column;
     background-color: #ffffff;
     .logoContainer {
         display: flex;
         flex-direction: row;
-        justify-content: start;
-        width: 100vw;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
         height: 60px;
         .logo {
             display: inline-flex;
-            width: 50px;
-            height: 50px;
+            width: 40px;
+            height: 40px;
+            margin: 0 1rem;
         }
     }
 
     .headingContainer {
-        margin: 6rem auto;
+        margin: 0 auto 6rem auto;
         position: relative;
         display: flex;
         flex-direction: row;
-        width: 100vw;
+        width: 100%;
         height: 50vh;
         .title {
             position: absolute;
@@ -34,15 +36,21 @@
             .overlay {
                 width: 100%;
                 height: 100%;
-                background: rgba(0, 0, 0, 0.3);
+                background: rgba(0, 0, 0, 0.45);
                 position: absolute;
                 z-index: 1;
-                .bgImg {
-                    width: 100%;
-                    height: 100%;
-                    position: absolute;
-                    z-index: 0;
-                }
+            }
+            .bgImg {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                z-index: 0;
+            }
+            .fullLogo {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                z-index: 2;
             }
         }
     }
