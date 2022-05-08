@@ -1,0 +1,17 @@
+@import "mixins";
+
+.logoContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+
+    .logo {
+        display: inline-flex;
+        width: 40px;
+        height: 40px;
+        margin: 0 1rem;
+    }
+}

@@ -7,22 +7,6 @@
     flex-direction: column;
     background-color: #ffffff;
 
-    .logoContainer {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 60px;
-
-        .logo {
-            display: inline-flex;
-            width: 40px;
-            height: 40px;
-            margin: 0 1rem;
-        }
-    }
-
     .headingContainer {
         margin: 0;
         position: relative;
@@ -66,7 +50,7 @@
 
     article {
 
-        padding: 3rem;
+        padding: 1.5rem;
 
         @include md {
             padding: 5rem;
