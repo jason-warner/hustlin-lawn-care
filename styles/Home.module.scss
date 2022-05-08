@@ -20,7 +20,7 @@
     }
 
     .headingContainer {
-        margin: 0 auto 6rem auto;
+        margin: 0 auto 2rem auto;
         position: relative;
         display: flex;
         flex-direction: row;
@@ -52,6 +52,16 @@
                 position: absolute;
                 z-index: 2;
             }
+        }
+    }
+    .about {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: fit-content;
+        padding: 0 2rem;
+        h3 {
+            margin: 0;
         }
     }
 }

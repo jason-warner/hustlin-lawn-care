@@ -31,9 +31,16 @@ const Home: NextPage = () => {
           <div className={style.fullLogo} >
             <Image src='/full-logo-white.svg' alt='logo' layout={'fill'} />
           </div>
-
         </span>
       </div>
+
+      <article>
+        <div className={style.about}>
+          <h3>Professional Lawn Care Servicing Hampton Roads</h3>
+          <p>We offer a wide variety of lawn care services ensuring full coverage for all of your lawn and yard maintenance needs in all seasons.<br/>Contact us via email, phone or instagram to receive a free quote!</p>
+        </div>
+
+      </article>
 
     </main>
   )
