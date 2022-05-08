@@ -2,6 +2,9 @@ import * as React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import style from '../styles/Navbar.module.scss'
+import { Ig } from '../components/icons/ig'
+import { Mail } from '../components/icons/mail'
+import { Phone } from '../components/icons/phone'
 
 const Navbar = () => {
     const [isClicked, setIsClicked] = React.useState(false);
@@ -37,6 +40,17 @@ const Navbar = () => {
                         </li>
                     ))}
                 </ul>
+            </div>
+            <div className={style.topbar}>
+                <div className={style.logo}>
+                    <Ig />
+                </div>
+                <div className={style.logo}>
+                    <Mail />
+                </div>
+                <div className={style.logo}>
+                    <Phone />
+                </div>
             </div>
         </nav>
     )
