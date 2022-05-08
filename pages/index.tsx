@@ -37,7 +37,8 @@ const Home: NextPage = () => {
       <article>
         <div className={style.about}>
           <h3>Professional Lawn Care Servicing Hampton Roads</h3>
-          <p>We offer a wide variety of lawn care services ensuring full coverage for all of your lawn and yard maintenance needs in all seasons.<br/>Contact us via email, phone or instagram to receive a free quote!</p>
+          <p>We offer a wide variety of lawn care services ensuring full coverage for all of your lawn and yard maintenance needs in all seasons.</p>
+          <p className={style.lastSentence} >Contact us via email, phone or instagram to receive a free quote!</p>
         </div>
 
       </article>

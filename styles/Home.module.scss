@@ -1,9 +1,12 @@
+@import "mixins";
+
 .main {
     height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
     background-color: #ffffff;
+
     .logoContainer {
         display: flex;
         flex-direction: row;
@@ -11,6 +14,7 @@
         align-items: center;
         width: 100%;
         height: 60px;
+
         .logo {
             display: inline-flex;
             width: 40px;
@@ -20,19 +24,22 @@
     }
 
     .headingContainer {
-        margin: 0 auto 2rem auto;
+        margin: 0;
         position: relative;
         display: flex;
         flex-direction: row;
         width: 100%;
         height: 50vh;
+
         .title {
             position: absolute;
             z-index: 2;
         }
+
         .background {
             width: 100%;
             height: 100%;
+
             .overlay {
                 width: 100%;
                 height: 100%;
@@ -40,12 +47,14 @@
                 position: absolute;
                 z-index: 1;
             }
+
             .bgImg {
                 width: 100%;
                 height: 100%;
                 position: absolute;
                 z-index: 0;
             }
+
             .fullLogo {
                 width: 100%;
                 height: 100%;
@@ -54,14 +63,55 @@
             }
         }
     }
-    .about {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: fit-content;
-        padding: 0 2rem;
-        h3 {
-            margin: 0;
+
+    article {
+
+        padding: 3rem;
+
+        @include md {
+            padding: 5rem;
         }
+
+        @include lg {
+            padding: 7rem;
+        }
+        display: flex;
+        justify-content: center;
+        .about {
+            background: rgba(0, 0, 0);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: fit-content;
+            justify-items: center;
+            padding: 0 1.5rem;
+            border-radius: 4px;
+            line-height: 200%;
+            @include md {
+                padding: 0 2.5rem;
+            }
+    
+            @include lg {
+                padding: 0 3.5rem;
+                max-width: 60vw;
+            }
+            h3 {
+                margin: 16px 0 0 0;
+                text-align: center;
+            }
+            p {
+                margin: 16px auto;
+                max-width: 750px;
+            }
+            .lastSentence {
+                width: fit-content;
+                display: flex;
+                justify-self: center;
+                margin-top: 0;
+            }
+        }
+
     }
+
 }
