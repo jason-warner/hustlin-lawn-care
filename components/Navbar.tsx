@@ -14,12 +14,15 @@ const Navbar = () => {
         'Contact'
     ];
     const mergeStyles = (styleArray: string[]) => (styleArray.map((style: string) => `${style}`).join(" "));
-    const conditionalClasses = (bool: boolean, classOne: string, classTwo: string) => (!!bool ? mergeStyles([classOne, classTwo]) : classOne)
+    const conditionalClasses = (bool: boolean, classOne: string, classTwo: string) => (!!bool ? mergeStyles([classOne, classTwo]) : classOne);
     return (
         <nav className={conditionalClasses(isClicked, style.nav, style.navOpen)}>
             <div className={style.logoContainer}>
                 <div className={style.mainLogoContainer}>
-                    <span className={style.logo}>
+                    <span
+                        onClick={() => setIsClicked(false)}
+                        className={style.logo}
+                    >
                         <Link href='/' passHref>
                             <Image src='/text-logo-white.svg' alt='logo' width='120px' height='60px' />
                         </Link>
@@ -35,7 +38,11 @@ const Navbar = () => {
             <div className={style.listContainer}>
                 <ul className={conditionalClasses(isClicked, style.ul, style.ulOpen)}>
                     {pages.map((page, index) => (
-                        <li key={index} className={conditionalClasses(isClicked, style.li, style.liOpen)}>
+                        <li
+                            key={index}
+                            onClick={() => setIsClicked(false)}
+                            className={conditionalClasses(isClicked, style.li, style.liOpen)}
+                        >
                             <Link href={`/${page.toLowerCase()}`}><div className={style.center}>{page}</div></Link>
                         </li>
                     ))}
