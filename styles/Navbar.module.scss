@@ -1,6 +1,9 @@
 @import "mixins";
 
 .nav {
+    position: fixed;
+    top: 0;
+    z-index: 10;
     background-color: black;
     justify-content: center;
     display: flex;

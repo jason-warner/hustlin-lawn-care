@@ -8,7 +8,7 @@ const Topbar = () => {
 
 
     return (
-        <div className={style.logoContainer}>
+        <div className={style.container}>
             <div className={style.logo}>
                 <Ig />
             </div>
