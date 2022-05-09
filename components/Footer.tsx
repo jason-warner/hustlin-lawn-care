@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <footer className={style.footer}>
             <div className={style.copyright}>
-                &copy; 2022-2026 HUSTLIN&apos; LAWN CARE
+                &copy; 2022-2026 HUSTLIN&apos; LAWN CARE LLC
             </div>
         </footer>
     );

@@ -58,13 +58,13 @@ const Header = () => {
                 </div>
             </nav>
             <div className={style.topbar}>
-                <a className={style.logo}>
+                <a href='https://www.instagram.com/hustlinlawncare/' target="_blank" rel="noreferrer" className={style.logo}>
                     <Ig />
                 </a>
-                <a className={style.logo}>
+                <a href='mailto:alex@hustlinlawncare.com' className={style.logo}>
                     <Mail />
                 </a>
-                <a className={style.logo}>
+                <a href='tel:+17576301662' className={style.logo} >
                     <Phone />
                 </a>
             </div>

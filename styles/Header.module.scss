@@ -68,6 +68,8 @@
             z-index: 10;
 
             .ul {
+                width: 100%;
+                height: 100%;
                 display: none;
                 align-items: center;
                 margin: 0 auto;
@@ -83,9 +85,14 @@
                 }
 
                 .li {
-                    height: fit-content;
+                    width: 100%;
+                    height: 100%;
                     color: white;
-
+                    align-content: center;
+                    justify-content: center;
+                    a {
+                        height: fit-content;
+                    }
                     @include md {
                         color: white;
                         display: inline-flex;
@@ -111,7 +118,7 @@
         align-items: center;
         width: 100%;
         height: 60px;
-
+        
         .logo {
             display: inline-flex;
             width: 40px;
