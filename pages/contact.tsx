@@ -1,14 +1,14 @@
 import * as React from 'react';
-import Head from 'next/head';
+import BottomNav from '../components/BottomNav';
 
 const contact = () => {
 
     return (
         <div>
             <h1>Contact</h1>
-
+            <BottomNav />
         </div>
-    )
+    );
 }
 
-export default contact
+export default contact;

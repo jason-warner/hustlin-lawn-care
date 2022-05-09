@@ -26,7 +26,9 @@ const Header = () => {
                             className={style.logo}
                         >
                             <Link href='/' passHref>
-                                <Image src='/text-logo-white.svg' alt='logo' width='120px' height='60px' />
+                                <a>
+                                    <Image src='/text-logo-white.svg' alt='logo' width='120px' height='60px' />
+                                </a>
                             </Link>
                         </span>
                     </div>
@@ -45,22 +47,26 @@ const Header = () => {
                                 onClick={() => setIsClicked(false)}
                                 className={conditionalClasses(isClicked, style.li, style.liOpen)}
                             >
-                                <Link href={`/${page.toLowerCase()}`}><div className={style.center}>{page}</div></Link>
+                                <Link passHref href={`/${page.toLowerCase()}`}>
+                                    <a className={style.center}>
+                                        {page}
+                                    </a>
+                                </Link>
                             </li>
                         ))}
                     </ul>
                 </div>
             </nav>
             <div className={style.topbar}>
-                <div className={style.logo}>
+                <a className={style.logo}>
                     <Ig />
-                </div>
-                <div className={style.logo}>
+                </a>
+                <a className={style.logo}>
                     <Mail />
-                </div>
-                <div className={style.logo}>
+                </a>
+                <a className={style.logo}>
                     <Phone />
-                </div>
+                </a>
             </div>
         </header>
     )

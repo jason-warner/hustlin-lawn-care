@@ -1,0 +1,22 @@
+@import "mixins";
+
+.container {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 100%;
+    align-content: center;
+    justify-content: center;
+    .option {
+        width: fit-content;
+        padding: .75rem;
+        border-radius: 4px;
+        background: black;
+        color: white;
+        display: flex;
+        align-self: center;
+        margin: 0 1.5rem;
+        // padding: .5rem;
+    }
+}

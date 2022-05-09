@@ -2,11 +2,11 @@ import * as React from 'react'
 import type { NextPage } from 'next'
 import style from '../styles/Home.module.scss'
 import Image from 'next/image'
+import BottomNav from '../components/BottomNav';
 
 
 const Home: NextPage = () => {
   return (
-    // <main className={style.main}>
     <>
       <div className={style.headingContainer}>
         <span className={style.background}>
@@ -29,8 +29,10 @@ const Home: NextPage = () => {
           <p className={style.lastSentence} >Contact us via email, phone or instagram today to receive a free quote!</p>
         </div>
       </article>
+
+      <BottomNav />
+
     </>
-    // </main>
   );
 }
 

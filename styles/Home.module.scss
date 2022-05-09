@@ -45,15 +45,14 @@
 }
 
 .article {
-    margin-bottom: 30px;
     padding: 1.5rem;
 
     @include md {
-        padding: 5rem;
+        padding: 2.5rem 5rem;
     }
 
     @include lg {
-        padding: 7rem;
+        padding: 3rem 7rem;
     }
 
     display: flex;
