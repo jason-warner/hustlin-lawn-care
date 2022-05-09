@@ -13,7 +13,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         <title>Hustlin&apos; Lawn Care</title>
       </Head>
       <Header />
-      <Component {...pageProps} />
+      <main className='main'>
+        <Component {...pageProps} />
+      </main>
       <Footer />
     </>
   );

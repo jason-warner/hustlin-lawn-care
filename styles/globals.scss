@@ -15,3 +15,12 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.main {
+  min-height: calc(100vh - 120px);
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+}
