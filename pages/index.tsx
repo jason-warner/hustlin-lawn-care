@@ -6,29 +6,30 @@ import Image from 'next/image'
 
 const Home: NextPage = () => {
   return (
-    <main className={style.main}>
-      <div className={style.headingContainer}>
-        <span className={style.background}>
-          <div className={style.overlay}></div>
-          <div className={style.bgImg}>
-            <Image src='/lawnbackdrop.jpeg' alt='logo' layout={'fill'} />
-          </div>
-          <div className={style.fullLogo} >
-            <Image src='/full-logo-white.svg' alt='logo' layout={'fill'} />
-          </div>
-        </span>
-      </div>
+      <main className={style.main}>
+        <div className={style.headingContainer}>
+          <span className={style.background}>
+            <div className={style.overlay}></div>
 
-      <article>
-        <div className={style.about}>
-          <h3>Professional Lawn Care Servicing Hampton Roads</h3>
-          <p>We offer a wide variety of lawn care services ensuring full coverage for all of your lawn and yard maintenance needs in all seasons.</p>
-          <p className={style.lastSentence} >Contact us via email, phone or instagram today to receive a free quote!</p>
+            <div className={style.bgImg}>
+              <Image src='/lawnbackdrop.jpeg' alt='logo' layout={'fill'} />
+            </div>
+
+            <div className={style.fullLogo} >
+              <Image src='/full-logo-white.svg' alt='logo' layout={'fill'} />
+            </div>
+          </span>
         </div>
-      </article>
 
-    </main>
-  )
+        <article>
+          <div className={style.about}>
+            <h1>Professional Lawn Care Servicing Hampton Roads</h1>
+            <p>We offer a wide variety of lawn care services ensuring full coverage for all of your lawn and yard maintenance needs in all seasons.</p>
+            <p className={style.lastSentence} >Contact us via email, phone or instagram today to receive a free quote!</p>
+          </div>
+        </article>
+      </main>
+  );
 }
 
-export default Home
+export default Home;
