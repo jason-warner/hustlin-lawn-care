@@ -7,7 +7,7 @@ import BottomNav from '../components/BottomNav';
 
 const Home: NextPage = () => {
   return (
-    <>
+    <> 
       <div className={style.headingContainer}>
         <span className={style.background}>
           <div className={style.overlay}></div>
@@ -28,9 +28,9 @@ const Home: NextPage = () => {
           <p>We offer a wide variety of lawn care services ensuring full coverage for all of your lawn and yard maintenance needs in all seasons.</p>
           <p className={style.lastSentence} >Contact us via email, phone or instagram today to receive a free quote!</p>
         </div>
-      </article>
+      </article> 
 
-      <BottomNav />
+      <BottomNav />  
 
     </>
   );
