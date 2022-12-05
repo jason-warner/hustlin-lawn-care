@@ -26,10 +26,10 @@ const BottomNav = () => {
     return (
         <div className={style.container}>
             {pages.map((page, index) => (
-                <Link key={index} passHref href={`/${page.toLowerCase()}`}>
-                    <a className={style.option}>
-                        {page}
-                    </a>
+                <Link className={style.option} key={index} passHref href={`/${page.toLowerCase()}`}>
+
+                    {page}
+
                 </Link>
             ))}
         </div>

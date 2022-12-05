@@ -26,9 +26,9 @@ const Header = () => {
                             className={style.logo}
                         >
                             <Link href='/' passHref>
-                                <a>
-                                    <Image src='/text-logo-white.svg' alt='logo' width='120px' height='60px' />
-                                </a>
+                                {/* <a> */}
+                                    <Image src='/text-logo-white.svg' alt='logo' width='120' height='60' />
+                                {/* </a> */}
                             </Link>
                         </span>
                     </div>
@@ -36,7 +36,7 @@ const Header = () => {
                         onClick={() => setIsClicked(!isClicked)}
                         className={style.navButton}
                     >
-                        <Image src='/image-logo.svg' alt='logo' width='80px' height='40px' />
+                        <Image src='/image-logo.svg' alt='logo' width='80' height='40' />
                     </span>
                 </div>
                 <div className={style.listContainer}>
@@ -48,9 +48,9 @@ const Header = () => {
                                 className={conditionalClasses(isClicked, style.li, style.liOpen)}
                             >
                                 <Link passHref href={`/${page.toLowerCase()}`}>
-                                    <a className={style.center}>
+                                    {/* <a className={style.center}> */}
                                         {page}
-                                    </a>
+                                    {/* </a> */}
                                 </Link>
                             </li>
                         ))}
