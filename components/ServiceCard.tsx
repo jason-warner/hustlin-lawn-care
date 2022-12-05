@@ -17,16 +17,19 @@ export default function ServiceCard({ title, summary, details, img }: IServiceCa
 
 
     return (
-        <Card sx={{ maxWidth: 345, boxShadow: 12, minHeight: '30vh' }}>
-            
-            <CardActionArea href={`mailto:alex@hustlinlawncare.com?subject=Quote for ${title}&body=Hello, \n I would like a quote for your ${title.toLowerCase()} service. \nMy address and phone number are...`} onClick={handleCardClick}>
-                    <CardMedia
-                        component="img"
-                        height="140"
-                        image={img}
-                        alt={title}
-                    />
-                <CardContent sx={{ height: '100%' }}>
+        <Card sx={{ maxWidth: 345, boxShadow: 12 }}>
+
+            <CardActionArea
+                href={`mailto:alex@hustlinlawncare.com?subject=Quote for ${title}&body=Hello, \n I would like a quote for your ${title.toLowerCase()} service. \nMy address and phone number are...`}
+                onClick={handleCardClick}
+            >
+                <CardMedia
+                    component="img"
+                    height="140"
+                    image={img}
+                    alt={title}
+                />
+                <CardContent>
                     <Typography sx={{ textAlign: 'center' }} gutterBottom variant="h5" component="div">
                         {title}
                     </Typography>
