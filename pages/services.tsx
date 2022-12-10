@@ -13,12 +13,10 @@ const services = () => {
 
 
             <div className={style.gridContainer}>
-
-
                 <div className={style.servicesGrid}>
                     {serviceCardData.map((data) => (
                         <ServiceCard
-                            img={data.img}
+                            img={{ img1: data.img1, img2: data.img2 }}
                             summary={data.summary}
                             details={data.details}
                             title={data.title}
@@ -37,45 +35,67 @@ export default services;
 
 const serviceCardData = [
     {
-        img: '/services/lawn.jpg',
+        img1: '/services/lawn1.jpg',
+        img2: '/services/lawn2.jpg',
         summary: 'There is no yard is too big or small, we mow them all! We ensure you get the best value for your money while putting quality first. ',
         details: '',
-        title: 'Lawn Mowing',
-        key: 'lawn-mowing'
+        title: 'Residential Lawn Care',
+        key: 'residential-lawn-care'
     },
     {
-        img: '/services/lawn.jpg',
+        img1: '/services/commercial1.jpg',
+        img2: '/services/commercial2.jpg',
         summary: 'There is no yard is too big or small, we mow them all! We ensure you get the best value for your money while putting quality first. ',
         details: '',
-        title: 'Lawn Mowing',
-        key: 'lawn-mowing'
+        title: 'Commercial Lawn Care',
+        key: 'commercial-lawn-care'
     },
     {
-        img: '/services/lawn.jpg',
+        img1: '/services/edging1.jpg',
+        img2: '/services/edging2.jpg',
         summary: 'There is no yard is too big or small, we mow them all! We ensure you get the best value for your money while putting quality first. ',
         details: '',
-        title: 'Lawn Mowing',
-        key: 'lawn-mowing'
+        title: 'Edging',
+        key: 'edging'
     },
     {
-        img: '/services/lawn.jpg',
+        img1: '/services/hedgeTrimming1.jpg',
+        img2: '/services/hedgeTrimming2.jpg',
         summary: 'There is no yard is too big or small, we mow them all! We ensure you get the best value for your money while putting quality first. ',
         details: '',
-        title: 'Lawn Mowing',
-        key: 'lawn-mowing'
+        title: 'Hedge Trimming',
+        key: 'hedge-trimming'
     },
     {
-        img: '/services/lawn.jpg',
+        img1: '/services/leafRemoval1.jpg',
+        img2: '/services/leafRemoval2.jpg',
         summary: 'There is no yard is too big or small, we mow them all! We ensure you get the best value for your money while putting quality first. ',
         details: '',
-        title: 'Lawn Mowing',
-        key: 'lawn-mowing'
+        title: 'Leaf Removal',
+        key: 'leaf-removal'
     },
     {
-        img: '/services/lawn.jpg',
+        img1: '/services/fall-spring-cleanup1.jpg',
+        img2: '/services/fall-spring-cleanup2.jpg',
         summary: 'There is no yard is too big or small, we mow them all! We ensure you get the best value for your money while putting quality first. ',
         details: '',
-        title: 'Lawn Mowing',
-        key: 'lawn-mowing'
+        title: 'Fall/Spring Cleanup',
+        key: 'fall-spring-cleanup'
+    },
+    {
+        img1: '/services/landscaping1.jpg',
+        img2: '/services/landscaping2.jpg',
+        summary: 'There is no yard is too big or small, we mow them all! We ensure you get the best value for your money while putting quality first. ',
+        details: '',
+        title: 'Small Landscaping',
+        key: 'small-landscaping'
+    },
+    {
+        img1: '/services/flowerBed1.jpg',
+        img2: '/services/flowerBed2.jpg',
+        summary: 'There is no yard is too big or small, we mow them all! We ensure you get the best value for your money while putting quality first. ',
+        details: '',
+        title: 'Flower Beds',
+        key: 'flower-beds'
     },
 ]

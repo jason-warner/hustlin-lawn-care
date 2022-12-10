@@ -9,6 +9,7 @@ import Button from '@mui/material/Button';
 export default function ServiceCard({ title, summary, details, img }: IServiceCard) {
 
     const [isClicked, setIsClicked] = React.useState(false);
+    const [hover, setHover] = React.useState(false);
 
 
     const handleCardClick = () => {
@@ -17,7 +18,11 @@ export default function ServiceCard({ title, summary, details, img }: IServiceCa
 
 
     return (
-        <Card sx={{ maxWidth: 345, boxShadow: 12 }}>
+        <Card
+            onMouseEnter={() => setHover(true)}
+            onMouseLeave={() => setHover(false)}
+            sx={{ maxWidth: 345, boxShadow: 12 }}
+        >
 
             <CardActionArea
                 href={`mailto:alex@hustlinlawncare.com?subject=Quote for ${title}&body=Hello, \n I would like a quote for your ${title.toLowerCase()} service. \nMy address and phone number are...`}
@@ -26,7 +31,7 @@ export default function ServiceCard({ title, summary, details, img }: IServiceCa
                 <CardMedia
                     component="img"
                     height="140"
-                    image={img}
+                    image={hover ? img.img2 : img.img1}
                     alt={title}
                 />
                 <CardContent>
@@ -46,5 +51,5 @@ export interface IServiceCard {
     title: string
     summary: string
     details: string
-    img: string
+    img: { img1: string, img2: string }
 }
