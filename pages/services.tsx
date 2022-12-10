@@ -1,22 +1,32 @@
 import * as React from 'react';
 import BottomNav from '../components/BottomNav';
 import ServiceCard from '../components/ServiceCard';
+import style from '../styles/Services.module.scss';
 
 const services = () => {
 
     return (
         <div>
-            <h1>Services</h1>
+            <div className={style.title}>
+                <h1>Services</h1>
+            </div>
 
 
+            <div className={style.gridContainer}>
 
-            <ServiceCard
-                img='/services/lawn.jpg'
-                summary='No yard is too big or small, we mow them all! We ensure you get the best value for your money while putting quality first. '
-                details=''
-                title='Lawn Mowing'
-                key={'Lawn Mowing'}
-            />
+
+                <div className={style.servicesGrid}>
+                    {serviceCardData.map((data) => (
+                        <ServiceCard
+                            img={data.img}
+                            summary={data.summary}
+                            details={data.details}
+                            title={data.title}
+                            key={data.key}
+                        />
+                    ))}
+                </div>
+            </div>
 
             <BottomNav />
         </div>
@@ -24,3 +34,48 @@ const services = () => {
 }
 
 export default services;
+
+const serviceCardData = [
+    {
+        img: '/services/lawn.jpg',
+        summary: 'There is no yard is too big or small, we mow them all! We ensure you get the best value for your money while putting quality first. ',
+        details: '',
+        title: 'Lawn Mowing',
+        key: 'lawn-mowing'
+    },
+    {
+        img: '/services/lawn.jpg',
+        summary: 'There is no yard is too big or small, we mow them all! We ensure you get the best value for your money while putting quality first. ',
+        details: '',
+        title: 'Lawn Mowing',
+        key: 'lawn-mowing'
+    },
+    {
+        img: '/services/lawn.jpg',
+        summary: 'There is no yard is too big or small, we mow them all! We ensure you get the best value for your money while putting quality first. ',
+        details: '',
+        title: 'Lawn Mowing',
+        key: 'lawn-mowing'
+    },
+    {
+        img: '/services/lawn.jpg',
+        summary: 'There is no yard is too big or small, we mow them all! We ensure you get the best value for your money while putting quality first. ',
+        details: '',
+        title: 'Lawn Mowing',
+        key: 'lawn-mowing'
+    },
+    {
+        img: '/services/lawn.jpg',
+        summary: 'There is no yard is too big or small, we mow them all! We ensure you get the best value for your money while putting quality first. ',
+        details: '',
+        title: 'Lawn Mowing',
+        key: 'lawn-mowing'
+    },
+    {
+        img: '/services/lawn.jpg',
+        summary: 'There is no yard is too big or small, we mow them all! We ensure you get the best value for your money while putting quality first. ',
+        details: '',
+        title: 'Lawn Mowing',
+        key: 'lawn-mowing'
+    },
+]
