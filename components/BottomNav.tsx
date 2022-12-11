@@ -25,13 +25,20 @@ const BottomNav = () => {
 
     return (
         <div className={style.container}>
-            {pages.map((page, index) => (
-                <Link className={style.option} key={index} passHref href={`/${page.toLowerCase()}`}>
+            {pages.map((page, index) => {
+                // console.log('location: ', location.pathname);
+                // const path = location.pathname;
+                // let shouldAddHome = false;
+                // pages.forEach((page) => )
+                // const newPages = location.pathname.includes('')
+                return (
+                    <Link className={style.option} key={index} passHref href={`/${page.toLowerCase()}`}>
 
-                    {page}
+                        {page}
 
-                </Link>
-            ))}
+                    </Link>
+                )
+            })}
         </div>
     )
 }
