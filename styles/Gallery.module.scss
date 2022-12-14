@@ -1,12 +1,19 @@
 @import "mixins";
 
+.galleryContainer {
+    width: 100vw;
+    justify-content: center;
+}
+
 .title {
     display: flex;
     flex-direction: row;
+    text-align: center;
     justify-content: center;
 }
 
 .gridContainer {
+    width: 100vw;
     display: flex;
     flex-direction: column;
     padding-bottom: 3rem;
@@ -14,7 +21,7 @@
     align-items: center;
 }
 
-.servicesGrid {
+.galleryGrid {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 1.5rem;

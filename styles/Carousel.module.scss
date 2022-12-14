@@ -1,0 +1,35 @@
+@import "mixins";
+
+
+.carouselContainer {
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+    margin-bottom: 2rem;
+    @include md {
+        margin-bottom: 0;
+    }
+}
+
+.cardContainer {
+    margin-bottom: 2rem;
+    @include md {
+        margin-bottom: 0;
+    }
+}
+
+.navRightContainer {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.navLeftContainer {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    padding: 1rem;
+    cursor: pointer;
+}

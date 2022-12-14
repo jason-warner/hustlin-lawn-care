@@ -1,13 +1,23 @@
 import * as React from 'react';
 import BottomNav from '../components/BottomNav';
 import { GalleryCard } from '../components/GalleryCard';
+import style from '../styles/Gallery.module.scss';
 
 const gallery = ({ feed }: any) => {
 
     return (
-        <div>
-            <h1>Gallery</h1>
-            <GalleryCard feed={feed} />
+        <div className={style.galleryContainer}>
+            <div className={style.title}>
+                <h1>Gallery</h1>
+            </div>
+
+            <div className={style.gridContainer}>
+                <div className={style.galleryGrid}>
+                    {!!feed?.data.length && feed?.data.map((data: any) => (
+                        <GalleryCard key={data.id} data={data} />
+                    ))}
+                </div>
+            </div>
             <BottomNav />
         </div>
     );
@@ -16,7 +26,17 @@ const gallery = ({ feed }: any) => {
 
 export const getStaticProps = async () => {
     const mediaToken = process.env.IG_APP_TOKEN;
-    const apiUrl = `https://graph.instagram.com/me/media?fields=id,caption,media_url,permalink&access_token=${mediaToken}`;
+    const fields = [
+        'caption',
+        'children{media_type,media_url,thumbnail_url}',
+        'id',
+        'media_type',
+        'media_url',
+        'permalink',
+        'thumbnail_url',
+        'timestamp'
+    ].join(',');
+    const apiUrl = `https://graph.instagram.com/me/media?fields=${fields}&access_token=${mediaToken}`;
     const data = await fetch(apiUrl);
     const feed = await data.json();
     return { props: { feed } };

@@ -21,7 +21,7 @@ const BottomNav = () => {
 
     React.useEffect(() => setCurrentUrl(window.location.href), []);
 
-    React.useEffect(() => console.log(currentUrl), [currentUrl]);
+    // React.useEffect(() => console.log(currentUrl), [currentUrl]);
 
     return (
         <div className={style.container}>
