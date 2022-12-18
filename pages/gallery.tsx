@@ -36,12 +36,13 @@ export const getStaticProps = async () => {
         'thumbnail_url',
         'timestamp'
     ].join(',');
-    const apiUrl = `https://graph.instagram.com/me/media?fields=${fields}&access_token=${mediaToken}`;
+    const apiUrl = `https://graph.instagram.com/me/media?size=l&fields=${fields}&access_token=${mediaToken}`;
     const data = await fetch(apiUrl);
     const feed = await data.json();
     return { props: { feed } };
 }
 
+// https://developers.facebook.com/docs/instagram-basic-display-api/guides/getting-profiles-and-media#get-a-user-s-media
 
 
 
