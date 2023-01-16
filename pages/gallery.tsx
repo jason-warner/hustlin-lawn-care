@@ -24,7 +24,7 @@ const gallery = ({ feed }: any) => {
 }
 
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
     const mediaToken = process.env.IG_APP_TOKEN;
     const fields = [
         'caption',
