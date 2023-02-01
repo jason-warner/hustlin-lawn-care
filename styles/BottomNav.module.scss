@@ -1,10 +1,12 @@
 @import "mixins";
 
 .container {
-    margin-bottom: 1.5rem;
+    position: absolute;
+    bottom: 1.5rem;
+    // margin: 1.5rem auto;
     display: flex;
     flex-direction: row;
-    position: relative;
+    // position: relative;
     width: 100%;
     align-content: center;
     justify-content: center;

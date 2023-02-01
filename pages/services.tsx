@@ -7,9 +7,16 @@ const services = () => {
 
     return (
         <div>
-            <div className={style.title}>
-                <h1>Services</h1>
+            <div className={style.heading}>
+                <div className={style.title}>
+                    <h1>Services</h1>
+                </div>
+                <span>Click a service below to request a free quote!</span>
             </div>
+
+
+
+
 
 
             <div className={style.gridContainer}>

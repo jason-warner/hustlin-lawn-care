@@ -27,7 +27,7 @@ const Header = () => {
                         >
                             <Link href='/' passHref>
                                 {/* <a> */}
-                                    <Image src='/text-logo-white.svg' alt='logo' width='120' height='60' />
+                                <Image src='/text-logo-white.svg' alt='logo' width='120' height='60' />
                                 {/* </a> */}
                             </Link>
                         </span>
@@ -43,13 +43,14 @@ const Header = () => {
                     <ul className={conditionalClasses(isClicked, style.ul, style.ulOpen)}>
                         {pages.map((page, index) => (
                             <li
+                                style={!isClicked ? { border: 'none' } : {}}
                                 key={index}
                                 onClick={() => setIsClicked(false)}
                                 className={conditionalClasses(isClicked, style.li, style.liOpen)}
                             >
                                 <Link passHref href={`/${page.toLowerCase()}`}>
                                     {/* <a className={style.center}> */}
-                                        {page}
+                                    {page}
                                     {/* </a> */}
                                 </Link>
                             </li>

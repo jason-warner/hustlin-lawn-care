@@ -1,12 +1,27 @@
 @import "mixins";
 
-.title {
+
+.heading {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
+    text-align: center;
+    .title {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .subTitle {
+        display: flex;
+        flex-direction: row;
+        flex-direction: row;
+        justify-content: center;
+    }
 }
 
+
 .gridContainer {
+    margin-bottom: 6rem;
     display: flex;
     flex-direction: column;
     padding-bottom: 3rem;
