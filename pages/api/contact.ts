@@ -69,16 +69,21 @@ const contactAPI = async (req: {
     const sendEmail = async (emailOptions: any) => {
         try {
             let emailTransporter = await createTransporter(); // @ts-ignore
-            return await emailTransporter.sendMail(emailOptions);
+            const response = await emailTransporter
+            .sendMail(emailOptions)
+            .then((data) => console.log('data: ', data))
+            .catch((err) => console.log('error1: '));
+
+            return response
         } catch (error) {
-            console.log('error: ', error)
+            console.log('error2: ', error)
         }
     };
 
     try {
         await sendEmail({
             from: email,
-            to: "example@gmail.com",
+            to: "jasonwarner.dev@gmail.com",
             subject: `Contact form submission from ${lastName}, ${firstName}`,
             html: `<p>You have a contact form submission</p><br>
         <p><strong>Email: </strong> ${email}</p><br>
