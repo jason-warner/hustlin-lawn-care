@@ -67,8 +67,12 @@ const contactAPI = async (req: {
     };
 
     const sendEmail = async (emailOptions: any) => {
-        let emailTransporter = await createTransporter(); // @ts-ignore
-        await emailTransporter.sendMail(emailOptions);
+        try {
+            let emailTransporter = await createTransporter(); // @ts-ignore
+            return await emailTransporter.sendMail(emailOptions);
+        } catch (error) {
+            console.log('error: ', error)
+        }
     };
 
     try {
