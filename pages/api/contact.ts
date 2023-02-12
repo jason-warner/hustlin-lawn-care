@@ -11,7 +11,7 @@ const contactAPI = async (req: {
 }, res: any) => {
     const { firstName, lastName, email, message } = req.body;
 
-    console.info('1:', process.env.CLIENT_ID, '\n2:', process.env.CLIENT_SECRET)
+    console.log('1:', process.env.CLIENT_ID, '\n2:', process.env.CLIENT_SECRET)
 
     const OAuth2 = google.auth.OAuth2;
     const oauth2Client = new OAuth2(
