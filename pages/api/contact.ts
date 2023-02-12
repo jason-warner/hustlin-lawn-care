@@ -60,6 +60,8 @@ const contactAPI = async (req: {
         });
 
         try {
+            console.log('access token: ', accessToken);
+            console.log('transporter: ', transporter);
             return transporter;
         } catch (error) {
             console.log('error: ', error);
@@ -74,7 +76,7 @@ const contactAPI = async (req: {
             .then((data) => console.log('data: ', data))
             .catch((err) => console.log('error1: '));
 
-            return response
+            return response;
         } catch (error) {
             console.log('error2: ', error)
         }
@@ -89,7 +91,9 @@ const contactAPI = async (req: {
         <p><strong>Email: </strong> ${email}</p><br>
         <p><strong>Message: </strong> ${message}</p><br>
       `
-        });
+        })
+        .then((data) => console.log('data2', data))
+        .catch((err) => console.log('error3', err));
     } catch (error: any) {
         return res.status(500).json({ error: error.message || error.toString() });
     }
