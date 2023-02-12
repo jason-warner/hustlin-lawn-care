@@ -72,9 +72,9 @@ const contactAPI = async (req: {
         try {
             let emailTransporter = await createTransporter(); // @ts-ignore
             const response = await emailTransporter
-            .sendMail(emailOptions)
-            .then((data) => console.log('data: ', data))
-            .catch((err) => console.log('error1: '));
+                .sendMail(emailOptions)
+                .then((data) => console.log('data: ', data))
+                .catch((err) => console.log('error1: ', err));
 
             return response;
         } catch (error) {
@@ -83,7 +83,7 @@ const contactAPI = async (req: {
     };
 
     try {
-        await sendEmail({
+        const response = await sendEmail({
             from: email,
             to: "jasonwarner.dev@gmail.com",
             subject: `Contact form submission from ${lastName}, ${firstName}`,
@@ -92,13 +92,13 @@ const contactAPI = async (req: {
         <p><strong>Message: </strong> ${message}</p><br>
       `
         })
-        .then((data) => console.log('data2', data))
-        .catch((err) => console.log('error3', err));
+            .then((data) => console.log('data2', data))
+            .then(() => res.status(200).json({ status: 200 }))
+            .catch((err) => console.log('error3', err));
+        return response;
     } catch (error: any) {
         return res.status(500).json({ error: error.message || error.toString() });
     }
-
-    return res.status(200).json({ error: "" });
 };
 
 
