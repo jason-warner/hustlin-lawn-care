@@ -78,7 +78,7 @@ const contactAPI = async (req: {
     try {
         const response = await sendEmail({
             from: email,
-            to: "skatetrippy@yahoo.com",
+            to: "hustlinlawncare2021@gmail.com",
             subject: `Contact form submission from ${lastName}, ${firstName}`,
             html: `<p>You have a contact form submission</p><br>
         <p><strong>Email: </strong> ${email}</p><br>

@@ -25,7 +25,7 @@ export default function ServiceCard({ title, summary, details, img }: IServiceCa
         >
 
             <CardActionArea
-                href={`mailto:alex@hustlinlawncare.com?subject=Quote for ${title}&body=Hello, \n I would like a quote for your ${title.toLowerCase()} service. \nMy address and phone number are...`}
+                href={`mailto:hustlinlawncare2021@gmail.com?subject=Quote for ${title}&body=Hello, \n I would like a quote for your ${title.toLowerCase()} service. \nMy address and phone number are...`}
                 onClick={handleCardClick}
             >
                 <CardMedia

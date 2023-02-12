@@ -41,8 +41,6 @@ const Contact = () => {
         message: !form.message
     });
 
-
-
     const handleSubmit = async (e: any) => {
         e.preventDefault();
         const errors = checkErrors();

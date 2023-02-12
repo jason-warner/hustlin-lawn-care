@@ -49,9 +49,7 @@ const Header = () => {
                                 className={conditionalClasses(isClicked, style.li, style.liOpen)}
                             >
                                 <Link passHref href={`/${page.toLowerCase()}`}>
-                                    {/* <a className={style.center}> */}
                                     {page}
-                                    {/* </a> */}
                                 </Link>
                             </li>
                         ))}
@@ -62,7 +60,7 @@ const Header = () => {
                 <a href='https://www.instagram.com/hustlinlawncare/' target="_blank" rel="noreferrer" className={style.logo}>
                     <Ig />
                 </a>
-                <a href='mailto:alex@hustlinlawncare.com' className={style.logo}>
+                <a href='mailto:hustlinlawncare2021@gmail.com' className={style.logo}>
                     <Mail />
                 </a>
                 <a href='tel:+17576301662' className={style.logo} >

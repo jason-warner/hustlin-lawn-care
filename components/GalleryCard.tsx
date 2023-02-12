@@ -1,5 +1,4 @@
 import * as React from "react";
-import { useEffect, useRef, useState } from "react";
 import style from '../styles/Carousel.module.scss';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
@@ -7,8 +6,6 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 import { Carousel } from "./Carousel";
-
-// https://www.youtube.com/watch?v=kLFSTaCqzdQ
 
 
 const GalleryCard = ({ data }: any) => {
