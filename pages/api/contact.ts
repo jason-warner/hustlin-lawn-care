@@ -10,9 +10,6 @@ const contactAPI = async (req: {
     };
 }, res: any) => {
     const { firstName, lastName, email, message } = req.body;
-
-    console.log('1:', process.env.CLIENT_ID, '\n2:', process.env.CLIENT_SECRET, '\n3:', process.env.REFRESH_TOKEN, '\n4', process.env.EMAIL)
-
     const OAuth2 = google.auth.OAuth2;
     const oauth2Client = new OAuth2(
         process.env.CLIENT_ID,
@@ -34,7 +31,6 @@ const contactAPI = async (req: {
             refresh_token: process.env.REFRESH_TOKEN
         });
 
-
         const accessToken = await new Promise((resolve, reject) => {
             oauth2Client.getAccessToken((err, token) => {
                 if (err) {
@@ -42,7 +38,7 @@ const contactAPI = async (req: {
                 }
                 resolve(token);
             });
-        });
+        }).catch((err) => console.log('Access Token Error: ', err));
 
         const transporter = nodemailer.createTransport({ //@ts-ignore
             service: "gmail",
@@ -60,11 +56,9 @@ const contactAPI = async (req: {
         });
 
         try {
-            console.log('access token: ', accessToken);
-            console.log('transporter: ', transporter);
             return transporter;
         } catch (error) {
-            console.log('error: ', error);
+            console.log('Create Transport Error: ', error);
         }
     };
 
@@ -73,67 +67,32 @@ const contactAPI = async (req: {
             let emailTransporter = await createTransporter(); // @ts-ignore
             const response = await emailTransporter
                 .sendMail(emailOptions)
-                .then((data) => console.log('data: ', data))
-                .catch((err) => console.log('error1: ', err));
+                .catch((err) => console.log('Email Transport Err: ', err));
 
             return response;
         } catch (error) {
-            console.log('error2: ', error)
+            console.log('Email Transport Error: ', error)
         }
     };
 
     try {
         const response = await sendEmail({
             from: email,
-            to: "jasonwarner.dev@gmail.com",
+            to: "skatetrippy@yahoo.com",
             subject: `Contact form submission from ${lastName}, ${firstName}`,
             html: `<p>You have a contact form submission</p><br>
         <p><strong>Email: </strong> ${email}</p><br>
         <p><strong>Message: </strong> ${message}</p><br>
       `
         })
-            .then((data) => console.log('data2', data))
             .then(() => res.status(200).json({ status: 200 }))
-            .catch((err) => console.log('error3', err));
+            .catch((err) => console.log('Send Email Err', err));
         return response;
     } catch (error: any) {
+        console.log('Send Email Error: ', error)
         return res.status(500).json({ error: error.message || error.toString() });
     }
 };
 
 
 export default contactAPI;
-
-
-
-
-
-
-
-
-
-// import SMTPTransport from "nodemailer/lib/smtp-transport";
-
-    // const transporter = nodemailer.createTransport({
-    //     host: "smtp.gmail.com",
-    //     port: 465,
-    //     secure: true,
-    //     auth: {
-    //         user: process.env.SMTP_USER,
-    //         pass: process.env.SMTP_PASSWORD
-    //     }
-    // });
-
-    // try {
-    //     await transporter.sendMail({
-    //         from: email,
-    //         to: "example@gmail.com",
-    //         subject: `Contact form submission from ${lastName}, ${firstName}`,
-    //         html: `<p>You have a contact form submission</p><br>
-    //     <p><strong>Email: </strong> ${email}</p><br>
-    //     <p><strong>Message: </strong> ${message}</p><br>
-    //   `
-    //     });
-    // } catch (error: any) {
-    //     return res.status(500).json({ error: error.message || error.toString() });
-    // }
