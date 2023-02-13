@@ -91,7 +91,7 @@ const Contact = () => {
                 <span>Fill out and submit the form below to contact us for a quote or questions on available services.</span>
             </div>
             <div className={style.formContainer}>
-                <form name='Contact' >
+                <form className={style.form} name='Contact' >
                     <div className={style.nameContainer}>
                         <div style={{ display: 'flex', flexDirection: 'column' }}>
                             <TextField

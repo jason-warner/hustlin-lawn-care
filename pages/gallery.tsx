@@ -13,7 +13,7 @@ const gallery = ({ feed }: any) => {
 
             <div className={style.gridContainer}>
                 <div className={style.galleryGrid}>
-                    {!!feed?.data.length && feed?.data.map((data: any) => (
+                    {!!feed?.data?.length && feed?.data.map((data: any) => (
                         <GalleryCard key={data.id} data={data} />
                     ))}
                 </div>
